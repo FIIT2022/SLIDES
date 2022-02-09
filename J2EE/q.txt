@@ -1,0 +1,77 @@
+What does the following declaration mean?
+int (*ptr)[10];
+A.ptr is array of pointers to 10 integers
+B.ptr is a pointer to an array of 10 integers
+C.ptr is an array of 10 integers
+D.ptr is an pointer to array
+
+What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?
+
+A.The element will be set to 0.
+B.The compiler would report an error.
+C.The program may crash if some important data gets overwritten.
+D.The array size would appropriately grow.
+
+. What is the difference between the following 2 codes?
+
+    #include <stdio.h> //Program 1
+    int main()
+    {
+        int d, a = 1, b = 2;
+        d =  a++ + ++b;
+        printf("%d %d %d", d, a, b);
+    }
+    #include <stdio.h> //Program 2
+    int main()
+    {
+        int d, a = 1, b = 2;
+        d =  a++ +++b;
+        printf("%d %d %d", d, a, b);
+    }
+a) No difference as space doesn’t make any difference, values of a, b, d are same in both the case
+b) Space does make a difference, values of a, b, d are different
+c) Program 1 has syntax error, program 2 is not
+d) Program 2 has syntax error, program 1 is not
+
+
+2. What will be the output of the following C code?
+
+    #include <stdio.h>
+    int main()
+    {
+        int a = 1, b = 1, c;
+        c = a++ + b;
+        printf("%d, %d", a, b);
+    }
+a) a = 1, b = 1
+b) a = 2, b = 1
+c) a = 1, b = 2
+d) a = 2, b = 2
+
+
+3. What will be the output of the following C code?
+
+    #include <stdio.h>
+    int main()
+    {
+        int a = 1, b = 1, d = 1;
+        printf("%d, %d, %d", ++a + ++a+a++, a++ + ++b, ++d + d++ + a++);
+    }
+a) 15, 4, 5
+b) 9, 6, 9
+c) 9, 3, 5
+d) Undefined (Compiler Dependent)
+
+What will be the output of the following C code?
+ #include <stdio.h>
+    int main()
+    {
+        int a = 10, b = 10;
+        if (a = 5)
+        b--;
+        printf("%d, %d", a, b--);
+    }
+a) a = 10, b = 9
+b) a = 10, b = 8
+c) a = 5, b = 9
+d) a = 5, b = 8
